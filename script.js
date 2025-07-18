@@ -50,5 +50,10 @@ downloadBtn.addEventListener('click', () => {
     const ctx = finalCanvas.getContext('2d');
     photos.forEach((photo,i) => {
         ctx.drawImage(photo, 0, i * height, width, height);
-    })
-})
+    });
+
+    const link= document.createElement('a');
+    link.download = 'photobooth-strip.png';
+    link.href = finalCanvas.toDataURL('image/png');
+    link.click();
+});
