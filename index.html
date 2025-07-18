@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhotoBooth App</title>
       <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>SnapBooth.click</h1>
+    <h1>SnapBooth.cl;ck</h1>
+    <label for="filters">Choose Filter:</label>
+<select id="filters">
+  <option value="none">None</option>
+  <option value="grayscale(100%)">Grayscale</option>
+  <option value="sepia(100%)">Sepia</option>
+  <option value="invert(100%)">Invert</option>
+  <option value="contrast(200%)">High Contrast</option>
+  <option value="blur(3px)">Blur</option>
+</select>
+
     <video id="video" autoplay></video>
     <br>
-    <button id="capture">Take Photo</button>
-    <button id="download" disabled>Download Strip</button>
+    <button id="capture"><i class="fa-solid fa-camera-retro fa-bounce fa-2xl" style="color: #0a121f;"></i></button>
+    <button id="download" disabled><i class="fa-solid fa-download fa-beat-fade fa-2xl" style="color: black;"></i></button>
     <div id="photo-strip"></div>
     <canvas id="final-canvas" style="display: none;"></canvas>
 <script src="script.js"></script>
