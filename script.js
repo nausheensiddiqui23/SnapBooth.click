@@ -23,6 +23,9 @@ captureBtn.addEventListener('click', () => {
   canvas.height = video.videoHeight;
   const ctx = canvas.getContext('2d');
   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+
+  
   // Grayscale effect
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < imageData.data.length; i += 4) {
