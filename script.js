@@ -30,3 +30,15 @@ captureBtn.addEventListener('click', () => {
     imageData.data[i] = imageData.data[i+1] = imageData.data[i+2] = avg;
   }
   ctx.putImageData(imageData, 0, 0);
+ const img = document.createElement('img');
+  img.src = canvas.toDataURL('image/png');
+  img.classList.add('photo');
+  strip.appendChild(img);
+
+  photos.push(canvas);
+  photoCount++;
+
+  if (photoCount === 4) {
+    downloadBtn.disabled = false;
+  }
+});
