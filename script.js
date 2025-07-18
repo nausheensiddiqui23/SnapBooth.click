@@ -42,3 +42,13 @@ captureBtn.addEventListener('click', () => {
     downloadBtn.disabled = false;
   }
 });
+downloadBtn.addEventListener('click', () => {
+    const width = photos[0].width;
+    const height = photos[0].height;
+    finalCanvas.width = width;
+    finalCanvas.height = height * 4;
+    const ctx = finalCanvas.getContext('2d');
+    photos.forEach((photo,i) => {
+        ctx.drawImage(photo, 0, i * height, width, height);
+    })
+})
