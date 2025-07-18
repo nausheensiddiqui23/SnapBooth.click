@@ -21,3 +21,12 @@ captureBtn.addEventListener('click', () => {
   const canvas = document.createElement('canvas');
   canvas.width = video.videoWidth;
   canvas.height = video.videoHeight;
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+  // Grayscale effect
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  for (let i = 0; i < imageData.data.length; i += 4) {
+    const avg = (imageData.data[i] + imageData.data[i+1] + imageData.data[i+2]) / 3;
+    imageData.data[i] = imageData.data[i+1] = imageData.data[i+2] = avg;
+  }
+  ctx.putImageData(imageData, 0, 0);
