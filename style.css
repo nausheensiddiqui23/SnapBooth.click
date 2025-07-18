@@ -12,6 +12,13 @@ h1{
     margin-bottom: 20px;
     color: rgb(176, 188, 5);
 }
+select {
+  padding: 6px 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
 
 video{
     width: 500px;
