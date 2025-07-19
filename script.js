@@ -39,10 +39,11 @@ captureBtn.addEventListener('click', () => {
   }
 
   // Flash effect
-  const flash = document.createElement('div');
-  flash.classList.add('flash');
-  document.body.appendChild(flash);
-  setTimeout(() => flash.remove(), 500);
+  document.body.classList.add('flash-active');
+setTimeout(() => {
+  document.body.classList.remove('flash-active');
+}, 500);
+
 
   // Reset CSS filter if using pixel-based
   const filterType = filterSelect.value;
