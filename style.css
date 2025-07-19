@@ -1,40 +1,54 @@
-body{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f7f7f7;
-    background-image: url("Gemini_Generated_Image.png");
-    background-size: cover;
-    padding: 20px;
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("Gemini_Generated_Image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
-h1{
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: rgb(176, 188, 5);
+h1 {
+  font-size: 2.5rem;
+  color: rgb(176, 188, 5);
+  margin-bottom: 20px;
 }
+
+
+
+
+video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  border: 3px solid gold;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
 select {
   padding: 6px 10px;
   font-size: 1rem;
-  margin-bottom: 10px;
   border-radius: 6px;
 }
 
-
-video{
-    width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    border: 2px solid gold;
-}
 button {
   width: 60px;
   height: 60px;
-  margin: 10px;
   border: none;
   border-radius: 50%;
   background-color: #c41a88;
   color: white;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(222, 78, 195, 0.2);
   transition: transform 0.2s;
@@ -48,12 +62,30 @@ button:hover {
 #photo-strip {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
   align-items: center;
+  max-height: 400px;         /* Fix this */
+  overflow-y: auto;          /* Scroll instead of pushing content down */
+  margin-top: 20px;
 }
+
+
 .photo {
   width: 300px;
-  margin: 5px 0;
+  margin: 10px 0;
   border: 5px solid white;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.flash {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: white;
+  opacity: 0.8;
+  z-index: 9999;
+  pointer-events: none;
+  animation: flashFade 0.5s ease-out forwards;
+}
+
+@keyframes flashFade {
+  to { opacity: 0; }
 }
