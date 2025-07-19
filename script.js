@@ -126,4 +126,5 @@ downloadBtn.addEventListener('click', () => {
   link.download = 'photobooth-strip.png';
   link.href = finalCanvas.toDataURL('image/png');
   link.click();
+  
 });
