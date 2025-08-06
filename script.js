@@ -158,3 +158,4 @@ const stripObserver = new MutationObserver(() => {
     ease: "power2.out"
   });
 });
+stripObserver.observe(strip, { childList: true });
