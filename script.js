@@ -149,3 +149,12 @@ gsap.from(".buttons button", {
   duration: 1,
   ease: "back.out(1.7)"
 });
+const stripObserver = new MutationObserver(() => {
+  gsap.from("#photo-strip img:last-child", {
+    opacity: 0,
+    y: 20,
+    scale: 0.9,
+    duration: 0.6,
+    ease: "power2.out"
+  });
+});
