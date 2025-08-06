@@ -128,3 +128,9 @@ downloadBtn.addEventListener('click', () => {
   link.click();
   
 });
+gsap.from("#heading", {
+  y: -50,
+  opacity: 0,
+  duration: 1.5,
+  ease: "power4.out"
+});
