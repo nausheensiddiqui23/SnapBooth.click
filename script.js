@@ -141,3 +141,11 @@ gsap.from("#video", {
   delay: 0.5,
   ease: "power2.out"
 });
+gsap.from(".buttons button", {
+  opacity: 0,
+  y: 30,
+  stagger: 0.2,
+  delay: 0.8,
+  duration: 1,
+  ease: "back.out(1.7)"
+});
