@@ -134,3 +134,10 @@ gsap.from("#heading", {
   duration: 1.5,
   ease: "power4.out"
 });
+gsap.from("#video", {
+  opacity: 0,
+  scale: 0.8,
+  duration: 1.2,
+  delay: 0.5,
+  ease: "power2.out"
+});
